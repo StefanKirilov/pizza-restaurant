@@ -1,0 +1,37 @@
+<div class="login-container">
+<section class="login-page" >
+    <img class='image' src="../../../assets/Pizza-logo-isolated-on-transparent-background-PNG.png" alt="" />
+    <form class='login-form' #loginForm="ngForm" (ngSubmit)="submitHandler(loginForm)">
+        <div class='container'>
+            <h1>Login</h1>
+            <label name='email'>Email</label>
+            <input type="text" id="email" name="email" placeholder='Enter your email...' ngModel email required
+            #emailInput="ngModel"/>
+
+             <!-- MSG ERROR -->
+
+            <div *ngIf="emailInput.touched" class="error">
+                <div *ngIf="emailInput.errors?.['required']">Email is required!</div>
+                <div *ngIf="emailInput.errors?.['email']">Invalid email!</div>
+            </div>
+
+            <label name='password'>Password</label>
+            <input type="password" id="password" name="password" placeholder='Enter password...' ngModel required
+            #passwordInput="ngModel" [appMaxCount]="8" [appMinCount]="4"/>
+
+            <!-- MSG ERROR -->
+
+            <div class="error" *ngIf="passwordInput.touched">
+                <div *ngIf="passwordInput.errors?.['appMinCount']">Password is short than 4!</div>
+                <div *ngIf="passwordInput.errors?.['appMaxCount']">Password is longer than 8!</div>
+            </div>
+
+            <input class='btn submit' type='submit' value="LOGIN" />
+
+            <p className="field">
+                <span>If you don't have profile click <a routerLink="/register">here</a></span>
+            </p>
+    </div>
+</form>
+</section>
+</div>

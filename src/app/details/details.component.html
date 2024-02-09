@@ -1,0 +1,29 @@
+<div class="top-container">
+    <div class="loader" *ngIf="isLoading">
+        <app-loader/>
+    </div>
+    <div *ngFor="let pizza of dataPizza">
+        <h1 class="name">{{pizza.name}}</h1>
+        <div class="content">
+            <img src="{{pizza.imageUrl}}" alt="">
+            <div class="content-text">
+                <p>{{pizza.weight}}</p>
+                <p>/</p>
+                <h1>{{pizza.price.toFixed(2)}}lv</h1>
+                <h2>{{pizza.products}}</h2>
+                <div class="like">
+                    <p class="empty" (click)="like()" *ngIf="!isLiked">&#9825;</p>
+                    <p class="full" (click)="notLike()" *ngIf="isLiked">&#10084;</p>
+                </div>
+                <div class="order">
+                    <div class="count">
+                        <input (click)="minus()" class='minus submit' type='submit' value="-" />
+                        <p>{{count}}</p>
+                        <input (click)="plus()" class='plus submit' type='submit' value="+" />
+                    </div>
+                    <input (click)="order()" class='btn submit' type='submit' value="ORDER" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

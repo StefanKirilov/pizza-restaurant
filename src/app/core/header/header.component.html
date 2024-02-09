@@ -1,0 +1,34 @@
+<header class="header">
+    <nav class="navigation">
+        <div class="logo-div">
+            <a routerLink="/menu">
+            <img src="../../../assets/Pizza-logo-isolated-on-transparent-background-PNG.png" class="logo">
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a (click)="clear()" routerLink="/menu">Menu</a>
+                <ul class="dropdown">
+                    <li> <a (click)="clear()" routerLink="/menu-pizza">Pizza</a></li>
+                    <li><a (click)="clear()" routerLink="/menu-drinks">Drinks</a></li>
+                    <li><a (click)="clear()" routerLink="/menu-sauce">Sauce</a></li>
+                </ul>
+            </li>
+            <li><a (click)="clear()" routerLink="/about">About</a></li>
+            <li><a (click)="clear()" routerLink="/contacts">Contacts</a></li>
+            <div class="user" *ngIf="isLoggedIn">
+                <li><a (click)="clear()" routerLink="/profile">Profile</a></li>
+                <li (click)="shop()" class="shop"><a><img class="shop" src="../../../assets/shop.png" alt="shop"></a></li>
+                <input type="checkbox" class="check">
+                <div class="shoppingCart">
+                    <app-shoping/>
+                </div>
+                <li (click)="logout()"><a>Logout</a></li>
+            </div>
+            <div class="guest" *ngIf="!isLoggedIn">
+                <li><a routerLink="/login">Login</a></li>
+                <li><a routerLink="/register">Register</a></li>
+            </div>
+        </ul>
+    </nav>
+</header>

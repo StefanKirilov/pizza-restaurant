@@ -1,0 +1,104 @@
+.top-container {
+    min-height: 100%;
+    caret-color: transparent;
+}
+
+.name{
+    text-align: center;
+    color: #ceab4a;
+    margin-top: 86px;
+    margin-bottom: 64px;
+
+}
+
+.content {
+display: flex;
+padding-left: 15%;
+padding-right: 15%;
+gap: 40px;
+}
+
+.content img{
+border: 2px solid  #394e2d;
+border-radius: 20px;
+margin-right: auto;
+width: 50%;
+}
+
+.content-text{
+color: #ceab4a;
+width: 300px;
+}
+
+.content-text p {
+display: inline-block;
+font-size: 24px;
+}
+
+.content-text h1 {
+display: inline-block;
+font-size: 36px;
+margin-top: 32px;
+}
+
+.content-text h2 {
+font-size: 24px;
+}
+
+.container-items .like {
+display: inline-flex;
+margin-right: 20%;
+margin-top: 20px;
+}
+
+.like .full{
+font-size: 30px;
+}
+
+.like .empty{
+font-size: 42px;
+}
+
+.content-text .order {
+    width: 100px;
+    margin-top: 20px;
+}
+
+.content-text .count {
+display: flex;
+justify-content: center;
+}
+
+.content-text .count .minus,.plus {
+    margin: 0;
+    width:40px;
+    padding: 4px;
+    border-radius: 8px;
+    border: 2px solid rgba(145, 144, 144, 0.9);
+    background-color:rgba(105, 104, 104, 0.8);
+    color: #ceab4a;
+}
+
+.content-text .count p {
+text-align: center;
+padding: 0px 10px;
+}
+
+.content-text .btn {
+    display: flex;
+    justify-content: center;
+    width:90px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid rgba(145, 144, 144, 0.9);
+    background-color:rgba(105, 104, 104, 0.8);
+    color: #ceab4a;
+    margin: 12px auto;    
+}
+
+
+.content-text .btn:hover {
+color: white;
+background-color: #ddba58;
+cursor: pointer;
+}

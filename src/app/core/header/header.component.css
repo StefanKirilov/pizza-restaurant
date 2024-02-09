@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    top: 0;
+
+}
+
+.navigation {
+    background-color: rgba(0,0,0,0.5);
+    border-bottom: 3px solid transparent;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navigation ul{
+    display: inline-flex;
+    height: 100%;
+    padding: 12px 32px;
+    align-items: center;
+    gap: 12px;
+}
+
+.header .navigation .logo-div {
+    height: 100%;
+    display: inline-block;
+    padding: 5px;
+    margin-right: auto;
+    margin-left: 20px;
+    caret-color: transparent;
+}
+
+
+.header .navigation .logo-div a, .logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    caret-color: transparent;
+}
+
+.shop {
+    height: 24px;
+}
+
+.navigation .user {
+    display: inline-flex;
+    gap: 12px;
+    padding-top: 8px;
+}
+
+.navigation .guest {
+    display: inline-flex;
+    gap: 12px;
+}
+
+.navigation a {
+    color: #ddba58;
+    display: inline-flex;
+    text-decoration: none;
+    cursor: pointer;
+    caret-color: transparent;
+}
+
+.navigation li {
+    display: inline-flex;
+    text-decoration: none;
+    position: relative;
+    caret-color: transparent;
+}
+
+.navigation a:hover {
+    color: white;
+}
+
+ul li a {
+    display: block;
+}
+
+.navigation ul li ul.dropdown li {
+    display: block;
+}
+
+.navigation ul li ul.dropdown {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 16px;
+    left: -20px;
+    z-index: 999;
+    display: none;
+    caret-color: transparent;
+}
+
+.navigation ul li:hover ul.dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.shop {
+    margin-right: 10px;
+}
+
+.shoppingCart {
+    position: absolute;
+    z-index: 999;
+    left: 76%;
+    top: 50px;
+    display: none;
+}
+
+.check {
+    display: none;
+}
+
+.check:checked ~ .shoppingCart{
+    display: block;
+    animation: pop-open .5s;
+}
+
+#checkbox {
+    display: none;
+}
+
+label {
+    display: none;
+}
+
+@keyframes pop-open {
+    0% {
+        transform: scale(0);
+        transform: scale(0);
+    }
+    
+    50% {
+        transform: scale(1.1);
+        transform: scale(1.1);
+    }   
+}
+
+

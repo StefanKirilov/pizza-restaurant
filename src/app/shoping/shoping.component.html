@@ -1,0 +1,28 @@
+<div class="wrap">
+    <!-- <div class="loader" *ngIf="isLoading">
+        <app-loader />
+    </div> -->
+    <h1>ORDER</h1>
+    <div class='container-top'>
+        <div class='container-second' *ngFor="let product of dataProduct">
+            <div class="container-img">
+                <img class="image" src="{{product.imageUrl}}" />
+            </div>
+            <div class='container-items'>
+                <p> <a>{{product.name}}</a> </p>
+                <p class="count">{{product.count}}</p>
+                <p>x</p>
+                <p class="price">{{product.price}}lv</p>
+                <input (click)="delete(product.id)" class='delete submit' type='submit' value="X" />
+            </div>
+        </div>
+        <div class='container-second'>
+            <p>Total price:</p>
+            <p class="allPrice">{{allPrice.toFixed(2)}}lv</p>
+        </div>
+        <div class="buttons">
+            <input (click)="orderProduct()" class='order-btn submit' type='submit' value="ORDER" />
+            <input (click)="refreshProduct()" class='refresh-btn submit' type='submit' value="REFRESH" />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="register-container">
+    <section class="register-page">
+        <img class='image' src="../../../assets/Pizza-logo-isolated-on-transparent-background-PNG.png" alt='' />
+        <form class='register' #registerForm="ngForm" (ngSubmit)="submitHandler(registerForm)">
+            <div class='container'>
+                <h1>Login</h1>
+                <label name='email'>Email</label>
+                <input type="email" id="email" name="email" placeholder='Enter your email...' ngModel email required
+                    #emailInput="ngModel" />
+
+                <!-- MSG ERROR -->
+
+                <div *ngIf="emailInput.touched" class="error">
+                    <div *ngIf="emailInput.errors?.['required']">Email is required!</div>
+                    <div *ngIf="emailInput.errors?.['email']">Invalid email!</div>
+                </div>
+
+                <label name='name'>Name</label>
+                <input type="text" id="name" name="name" placeholder='Enter your name...' ngModel required
+                    #nameInput="ngModel" />
+
+                <!-- MSG ERROR -->
+
+                <div *ngIf="nameInput.touched" class="error">
+                    <div *ngIf="nameInput.errors?.['required']">Name is required!</div>
+                </div>
+
+                <label name='password'>Password</label>
+                <input type="password" id="password" name="password" placeholder='Enter password...' ngModel required
+                    #passwordInput="ngModel" [appMaxCount]="8" [appMinCount]="4" />
+
+                <!-- MSG ERROR -->
+
+                <div class="error">
+                    <div *ngIf="passwordInput.errors?.['appMinCount']">Password is short than 4!</div>
+                    <div *ngIf="passwordInput.errors?.['appMaxCount']">Password is longer than 8!</div>
+                </div>
+
+                <label name='password'>Confirm Password</label>
+                <input type="password" id="rePassword" name="rePassword" placeholder='Enter password...' ngModel
+                    required #passwordInput="ngModel" [appMaxCount]="8" [appMinCount]="4" />
+
+                <!-- MSG ERROR -->
+
+                <div class="error">
+                    <div *ngIf="passwordInput.errors?.['appMinCount']">Password is short than 4!</div>
+                    <div *ngIf="passwordInput.errors?.['appMaxCount']">Password is longer than 8!</div>
+                </div>
+
+                <input class='btn submit' type='submit' value="REGISTER" />
+
+                <p class="field">
+                    <span>If you have profile click <a routerLink="/login">here</a></span>
+                </p>
+            </div>
+        </form>
+    </section>
+</div>

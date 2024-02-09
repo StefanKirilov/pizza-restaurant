@@ -1,0 +1,19 @@
+
+<div class="name">
+    <div class="loader" *ngIf="isLoading">
+        <app-loader/>
+      </div>
+    <h1>SAUCE</h1>
+<div class='container-top' *ngIf="!isLoading">
+    <div class='container-second' *ngFor="let sauce of sauceList">
+        <div class="container-img">
+            <img routerLink="/menu-sauce/{{sauce.id}}" class="image" src="{{sauce.imageUrl}}" />
+        </div>
+        <div class='container-items'>
+            <h1><a routerLink="/menu-sauce/{{sauce.id}}" >{{sauce.name}}</a></h1>
+            <p class="weight">{{sauce.weight}}</p>
+            <p class="price">{{sauce.price}} lv</p>
+        </div>
+    </div>
+</div>
+</div>

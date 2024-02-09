@@ -1,0 +1,82 @@
+.register-container{
+    min-height: 100%;
+    caret-color: transparent;
+    }
+    
+    .register-page {
+        width: 400px;
+        height: 720px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 60px;
+        border: solid 2px  rgba(100, 100, 100, 0.9);
+        box-shadow: 8px 4px 4px rgba(20, 20, 20, 0.9);
+        margin-top: 30px;
+        border-radius: 8px;
+        background-color: rgba(65, 64, 64, 0.7);
+    }
+    
+    
+    .image {
+        width: 100px;
+        height: 100px;
+        margin-top: 30px;
+        border-radius: 100%;
+    }
+    
+    
+    .container a {
+        color: #f56b0f;
+        display: inline-flex;
+        text-decoration: none;
+        font-size: medium;
+    }
+    
+    .container h1 {
+        color: #ddba58;
+    }
+    
+    .container label {
+        color: #ddba58;
+        display: block;
+        margin-top: 24px;
+        margin-bottom: 16px;
+    }
+    
+    .container input {
+        display: block;
+        margin: 0 auto;
+        background-color:rgba(136, 134, 134, 0.9);
+        border-radius: 15px;
+        width: 240px;
+        height: 24px;
+        padding: 5px;
+    }
+
+    ::placeholder {
+        color: rgb(0, 0, 0);
+      }
+    
+    .container .btn {
+        margin-top: 48px;
+        margin-bottom: 24px;
+        width: 120px;
+    }
+    
+    .container p {
+       color: #ddba58;
+    }
+    
+    .container .btn:hover {
+        color: white;
+        background-color: #ddba58;
+    }
+    
+    
+    .container a:hover {
+        color: white;
+    }
+
+    .error{
+        color: rgb(194, 60, 19);
+    }

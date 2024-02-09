@@ -1,0 +1,37 @@
+.heading {
+    color: #ddba58;
+    text-align: center;
+    font-size: 32px;
+    margin: 32px;
+    min-height: 100%;
+    caret-color: transparent;
+}
+
+.heading h1 {
+    margin: 48px;
+}
+
+.container {
+    display: flex;
+}
+
+.container .image{
+    width: 40%;
+    margin-left: 32px;
+}
+
+.container .image img{
+    width: 100%;
+    transition: 0.5s ease-in;
+}
+
+.container .image:hover img{
+    transform: scale(1.1);
+}
+
+.container p{
+    font-size: 24px;
+    width: 50%;
+    margin-left: auto;
+    padding: 28px;
+}

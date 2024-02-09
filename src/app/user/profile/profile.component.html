@@ -1,0 +1,27 @@
+<div class="top-container">
+    <div class="profile">
+        <div class="image">
+            <img src="../../../assets/profile-icon.png" alt="img8">
+        </div>
+        <div class="email">
+            <p>{{user.name}}</p>
+        </div>
+    </div>
+    <div class="wrap-categoria">
+        <div class="name-categoria">
+            <h1>Favorite pizza</h1>
+        </div>
+    </div>
+    <div class='container-top'>
+        <div class='container-second' *ngFor="let pizza of likePizza">
+            <div class="container-img">
+                <img routerLink="/menu-pizza/{{pizza.id}}" class="image" src="{{pizza.imageUrl}}" />
+            </div>
+            <div class='container-items'>
+                <h1> <a routerLink="/menu-pizza/{{pizza.id}}"> {{pizza.name}}</a> </h1>
+                <p class="weight">{{pizza.weight}}</p>
+                <p class="price">{{pizza.price}}</p>
+            </div>
+        </div>
+    </div>
+</div>

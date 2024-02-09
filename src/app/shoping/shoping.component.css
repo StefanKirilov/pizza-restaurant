@@ -1,0 +1,103 @@
+.wrap{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    width: 250px;
+    color: #ceab4a;
+}
+
+.wrap h1{
+    font-size: 22px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.container-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    caret-color: transparent;
+}
+
+
+.container-second{
+    display: flex;
+    width: 240px;
+    border: 2px solid rgba(145, 144, 144, 0.9);
+    padding: 15px;
+    background-color: rgba(105, 104, 104, 0.6);
+}
+
+.container-img{
+    background-color: rgba(105, 104, 104, 0.6);
+    height: 20px;
+}
+
+.container-img .image {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+.container-items{
+    display: flex;
+    gap: 10px;
+    color: #ceab4a;
+    background-color: transparent;
+
+}
+
+.container-items p a{
+    text-decoration: none;
+    color: #ceab4a;
+}
+
+.container-items .weight{
+    display: inline-flex;
+    margin-right: 20%;
+}
+
+.container-items .price{
+    display: inline-flex;
+    margin-right: auto;
+}
+
+.delete {
+   background-color: transparent;
+   cursor: pointer;
+   border: none;
+   color: #db0e0e;
+}
+
+.buttons{
+    display: flex;
+}
+
+
+.order-btn, .refresh-btn {
+    display: flex;
+    justify-content: center;
+    width:90px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid rgba(145, 144, 144, 0.9);
+    background-color:rgba(105, 104, 104, 0.8);
+    color: #ceab4a;
+    margin: 12px auto;  
+}
+
+.order-btn:hover, .refresh-btn:hover {
+    color: white;
+    background-color: #ddba58;
+    cursor: pointer;
+}
+
+.allPrice{
+    margin-left: 10px;
+}

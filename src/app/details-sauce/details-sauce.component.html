@@ -1,0 +1,24 @@
+<div class="top-container">
+    <div class="loader" *ngIf="isLoading">
+        <app-loader/>
+    </div>
+    <div *ngFor="let sauce of dataSauce">
+        <h1 class="name">{{sauce.name}}</h1>
+        <div class="content">
+            <img src="{{sauce.imageUrl}}" alt="">
+            <div class="content-text">
+                <p>{{sauce.weight}}</p>
+                <p>/</p>
+                <h1>{{sauce.price.toFixed(2)}}lv</h1>
+                <div class="order">
+                    <div class="count">
+                        <input (click)="minus()" class='minus submit' type='submit' value="-" />
+                        <p>{{count}}</p>
+                        <input (click)="plus()" class='plus submit' type='submit' value="+" />
+                    </div>
+                    <input (click)="order()" class='btn submit' type='submit' value="ORDER" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
